@@ -8,3 +8,93 @@ ul {
 a {
     text-decoration: none;
 }
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.box, 
+.pic li {
+    width: 790px;
+    height: 340px;
+}
+.box {
+    position: relative;
+    margin-top: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+/* 左右按钮 */
+.prev, 
+.next {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background-color: rgba(0,0,0,.5);
+    color:  #fff;
+    line-height: 50px;
+    text-align: center; 
+    z-index:10;
+}
+.prev {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.next {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+/* 底部小点 */
+.lis {
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: auto;
+    z-index:10;
+}
+.lis li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.lis li:last-child {
+    margin-right: 0;
+}
+.lis li a {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 14px;
+}
+/* 图片部分 */
+.pic {
+    position: absolute;
+    width: 7110px;
+    margin-left: -790px;
+    z-index: 5px;
+    -webkit-transition: all 1s; 
+    -moz-transition: all 1s; 
+    -ms-transition: all 1s; 
+    -o-transition: all 1s; 
+    transition: all 1s; 
+}
+.pic li {
+    float: left;
+}
